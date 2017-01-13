@@ -21,14 +21,14 @@ python installation and pip management
 
 ## Module Description
 
-this module provides a resource for managing pip modules
+this module provides a type for managing pip modules
 
 ## Setup
 
 ### What python affects
 
 * installs python and python-pip
-* adds a resource for pip module management: **pythonpip**
+* adds a type for pip module management: **pythonpip**
 
 ### Setup Requirements **OPTIONAL**
 
@@ -47,6 +47,12 @@ pythonpip { 'elasticsearch-curator':
 ## Usage
 
 ## Reference
+
+### types
+
+#### pythonpip
+
+* **ensure**: Install or uninstall pip modules (present/absent)
 
 ## Limitations
 

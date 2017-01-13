@@ -23,7 +23,7 @@ describe 'python class' do
 
     #pip list | grep nagiosplugin
     it "pip nagiosplugin" do
-      expect(shell("pip list | grep nagiosplugin").exit_code).to be_zero
+      expect(shell("LC_ALL=C pip list | grep nagiosplugin").exit_code).to be_zero
     end
 
 

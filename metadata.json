@@ -1,8 +1,8 @@
 {
   "name": "eyp-python",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "eyp",
-  "summary": "basic python installation",
+  "summary": "python installation + pip management",
   "license": "Apache-2.0",
   "source": "",
   "project_page": null,
@@ -13,7 +13,27 @@
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "6" ]
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "OEL",
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [ "6", "7" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "14.04" ]
     }
   ]
 }

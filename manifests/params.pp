@@ -9,7 +9,7 @@ class python::params {
 			$include_epel=true
 			case $::operatingsystemrelease
 			{
-				/^6.*$/:
+				/^[67].*$/:
 				{
 				}
 				default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }

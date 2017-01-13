@@ -1,7 +1,5 @@
 class python::params {
 
-	$python_pkgs= [ 'python', 'python-pip' ]
-
 	case $::osfamily
 	{
 		'redhat':
@@ -11,6 +9,7 @@ class python::params {
 			{
 				/^[67].*$/:
 				{
+					$python_pkgs= [ 'python2', 'python2-pip' ]
 				}
 				default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
 			}
@@ -26,6 +25,7 @@ class python::params {
 					{
 						/^14.*$/:
 						{
+							$python_pkgs= [ 'python', 'python-pip' ]
 						}
 						default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
 					}

@@ -27,7 +27,7 @@ class python::params {
         {
           case $::operatingsystemrelease
           {
-            /^14.*$/:
+            /^1[46].*$/:
             {
               $python_pkgs= [ 'python', 'python-pip' ]
             }

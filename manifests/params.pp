@@ -7,7 +7,11 @@ class python::params {
       $include_epel=true
       case $::operatingsystemrelease
       {
-        /^[67].*$/:
+				/^[56].*$/:
+        {
+          $python_pkgs= [ 'python', 'python-pip' ]
+        }
+        /^7.*$/:
         {
           $python_pkgs= [ 'python', 'python2-pip' ]
         }

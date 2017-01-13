@@ -1,16 +1,24 @@
 #
 class python inherits python::params {
 
-  include ::epel
+  if($python::params::include_epel)
+  {
+    include ::epel
 
-  package { $python_pkgs:
+    Package[$python::params::python_pkgs] {
+      require => Class['epel'],
+    }
+  }
+
+  package { $python::params::python_pkgs:
     ensure => 'installed',
-    require => Class['epel'],
   }
 
   # /usr/bin/pip /usr/bin/pip-python
   file { '/usr/bin/pip-python':
-    ensure => '/usr/bin/pip',
+    ensure  => 'link',
+    target  => '/usr/bin/pip',
+    require => Package[$python::params::python_pkgs],
   }
 
 }

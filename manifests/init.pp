@@ -1,6 +1,10 @@
 #
 class python inherits python::params {
 
+  Exec {
+    path => '/bin:/sbin:/usr/bin:/usr/sbin',
+  }
+
   if($python::params::include_epel)
   {
     include ::epel

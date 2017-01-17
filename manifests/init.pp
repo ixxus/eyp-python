@@ -21,7 +21,7 @@ class python inherits python::params {
       #zypper ar
       exec { 'install repo suse':
         command => "zypper ar ${python::params::repo_url}",
-        unless  => "zupper lr | grep '${python::params::repo_name}'",
+        unless  => "zypper lr | grep '${python::params::repo_name}'",
         before  => Package[$python::params::python_pkgs],
       }
 

@@ -13,9 +13,13 @@ class python::params {
         {
           $python_pkgs= [ 'python', 'python-pip' ]
         }
-        /^7\..*$/, /^201[567]\..*$/:
+        /^7\..*$/:
         {
           $python_pkgs= [ 'python', 'python2-pip' ]
+        }
+        /^201[567]\..*$/:
+        {
+          $python_pkgs= [ 'python27', 'python27-pip' ]
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }

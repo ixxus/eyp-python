@@ -9,11 +9,11 @@ class python::params {
       $repo_name=undef
       case $::operatingsystemrelease
       {
-        /^[56].*$/:
+        /^[56]\..*$/:
         {
           $python_pkgs= [ 'python', 'python-pip' ]
         }
-        /^7.*$/:
+        /^7\..*$/, /^201[567]\..*$/:
         {
           $python_pkgs= [ 'python', 'python2-pip' ]
         }
